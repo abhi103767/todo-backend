@@ -1,6 +1,9 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
+require('dotenv').config()
+
+const port = process.env.PORT || 4000
 
 app.use(express.urlencoded({extended : true}));
  app.use(express.json())
@@ -31,7 +34,7 @@ app.post('/',(req,res) => {
 
 
 
-app.listen('8080',(req,res) => {
+app.listen(port,(req,res) => {
     console.log('server is  started on http://localhost:8080');
 })
 
