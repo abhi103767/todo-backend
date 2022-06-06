@@ -12,6 +12,10 @@ app.get('/',(req,res) => {
 
 // task
 // status
+
+app.get('/',(req,res) => {
+    res.send('Welcome to homepage');
+})
 app.post('/',(req,res) => {
     fs.readFile('./db.json','utf8', (error,data) => {
         const parsed = JSON.parse(data);
